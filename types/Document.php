@@ -20,6 +20,8 @@ class Document extends Type
     public $mime_type;
 
     public $file_size;
+
+    public $thumbnail;
     
     public function getThumb()
     {

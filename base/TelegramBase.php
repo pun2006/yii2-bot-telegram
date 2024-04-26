@@ -109,10 +109,9 @@ class TelegramBase extends Component
                 $file = fopen($item, 'rb');
                 $is_resource |= is_resource($file);
                 $multipart[] = ['name' => $key, 'contents' => $file];
-            }
-
-
-            $multipart[]  = ['name' => $key, 'contents' => $item];
+            } else {
+                $multipart[]  = ['name' => $key, 'contents' => $item];
+            }            
         }
         if ($is_resource) {
 
